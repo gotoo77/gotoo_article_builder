@@ -29,11 +29,21 @@ mkdir -p "$ROOT_DIR/dist"
 
 OUTPUT="$ROOT_DIR/dist/$BASENAME.html"
 
+if pandoc --help 2>&1 | grep -q -- '--embed-resources'; then
+  RESOURCE_OPTION=--embed-resources
+elif pandoc --help 2>&1 | grep -q -- '--self-contained'; then
+  RESOURCE_OPTION=--self-contained
+else
+  echo "Error: this Pandoc version supports neither --embed-resources nor --self-contained." >&2
+  echo "Detected: $(pandoc --version | head -n 1)" >&2
+  exit 1
+fi
+
 pandoc "$SOURCE" \
   --from=markdown+yaml_metadata_block+fenced_divs \
   --to=html5 \
   --standalone \
-  --embed-resources \
+  "$RESOURCE_OPTION" \
   --template="$ROOT_DIR/templates/article.html" \
   --css="$ROOT_DIR/themes/gotoo.css" \
   --resource-path="$SOURCE_DIR:$ROOT_DIR" \
