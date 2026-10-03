@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="$if(lang)$$lang$$else$fr$endif$">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  $if(title)$<title>$title$</title>$endif$
+  $for(css)$<link rel="stylesheet" href="$css$">$endfor$
+</head>
+<body>
+  <main class="page">
+    <article class="article">
+      <header class="article-header">
+        $if(title)$<h1 class="article-title">$title$</h1>$endif$
+        $if(subtitle)$<p class="article-subtitle">$subtitle$</p>$endif$
+        $if(author)$<p class="article-meta">$author$$if(date)$ · $date$$endif$</p>$elseif(date)$<p class="article-meta">$date$</p>$endif$
+      </header>
+      <div class="article-body">
+$body$
+      </div>
+    </article>
+    <footer class="site-footer"><span>vTFF Gotoo!</span></footer>
+  </main>
+</body>
+</html>
