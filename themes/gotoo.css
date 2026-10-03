@@ -166,6 +166,27 @@ figcaption {
   object-fit: contain;
 }
 
+.ticket-strip {
+  width: min(1180px, calc(100vw - 2rem));
+  margin: 3rem 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .8rem;
+  align-items: start;
+}
+
+.ticket-strip p {
+  margin: 0;
+}
+
+.ticket-strip img {
+  width: 100%;
+  max-height: none;
+  margin: 0;
+  border-radius: .45rem;
+}
+
 pre {
   overflow-x: auto;
   padding: 1rem;
@@ -182,6 +203,16 @@ pre {
   color: var(--muted);
   font: .75rem/1.4 ui-sans-serif, system-ui, sans-serif;
   text-align: right;
+}
+
+@media (max-width: 800px) {
+  .ticket-strip {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    transform: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -211,6 +242,15 @@ pre {
   .wide img {
     max-height: 55vh;
   }
+
+  .ticket-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-strip img {
+    width: min(100%, 340px);
+    margin-inline: auto;
+  }
 }
 
 @media print {
@@ -224,5 +264,11 @@ pre {
   }
 
   .page { width: auto; padding: 0; }
-  .wide { width: auto; margin-left: 0; margin-right: 0; transform: none; }
+  .wide,
+  .ticket-strip {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    transform: none;
+  }
 }
