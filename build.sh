@@ -17,6 +17,7 @@ fi
 
 if ! command -v pandoc >/dev/null 2>&1; then
   echo "Error: pandoc is required but was not found in PATH." >&2
+  echo "Run: ./bootstrap.sh" >&2
   exit 1
 fi
 
