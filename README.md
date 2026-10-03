@@ -80,6 +80,36 @@ A short sentence worth emphasizing.
 ![An image](assets/image.png)
 ```
 
+## Editorial blocks
+
+The default theme defines three small building blocks using Pandoc fenced divs.
+
+Punchline:
+
+```md
+::: punchline
+Mon temps n'est pas gratuit.
+:::
+```
+
+Aside or digression:
+
+```md
+::: aside
+A short secondary thought that should not interrupt the main flow.
+:::
+```
+
+Wide content, typically an image:
+
+```md
+::: wide
+![An image](assets/image.png)
+:::
+```
+
+These are presentation hints only. The article source stays readable Markdown and the HTML template remains generic.
+
 ## Scope
 
 The first version intentionally does not provide a CMS, JavaScript framework, server, database or static-site generator.
