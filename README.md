@@ -48,6 +48,11 @@ It is a standalone HTML document. CSS and referenced local assets are embedded b
 - Arch: `pacman`
 - macOS: `brew`
 
+The build script supports both older and newer Pandoc releases:
+
+- newer Pandoc: `--embed-resources`
+- older Pandoc, including Ubuntu 22.04's 2.9.x package: `--self-contained`
+
 The build script never installs packages by itself. If Pandoc is missing it stops and tells you to run `./bootstrap.sh`.
 
 ## Writing an article
