@@ -14,24 +14,15 @@ article.md
 dist/article.html
 ```
 
-## Requirements
-
-- `pandoc`
-- POSIX shell
-
-On Debian/Ubuntu:
-
-```bash
-sudo apt install pandoc
-```
-
-On Fedora:
-
-```bash
-sudo dnf install pandoc
-```
-
 ## Quick start
+
+Install the dependency once:
+
+```bash
+./bootstrap.sh
+```
+
+Then build the example:
 
 ```bash
 ./build.sh examples/attention/article.md
@@ -44,6 +35,20 @@ dist/article.html
 ```
 
 It is a standalone HTML document. CSS and referenced local assets are embedded by Pandoc.
+
+## Requirements
+
+- `pandoc`
+- POSIX shell
+
+`bootstrap.sh` installs Pandoc automatically with the package manager available on the machine:
+
+- Debian/Ubuntu/WSL: `apt-get`
+- Fedora: `dnf`
+- Arch: `pacman`
+- macOS: `brew`
+
+The build script never installs packages by itself. If Pandoc is missing it stops and tells you to run `./bootstrap.sh`.
 
 ## Writing an article
 
