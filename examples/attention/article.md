@@ -22,9 +22,15 @@ On peut écrire un [lien hypertexte](https://example.org), ajouter une citation 
 
 > Une interface n'est jamais totalement neutre lorsqu'elle se bat pour notre attention.
 
-Et glisser une image directement dans le document :
+::: aside
+Une digression reste possible sans casser le fil principal. Le contenu est toujours du Markdown normal, seul le rôle éditorial change.
+:::
 
+Et élargir ponctuellement une image sans modifier le template :
+
+::: wide
 ![Jeton vTFF Gotoo](assets/vtff-gotoo.svg)
+:::
 
 ## Le contrat
 
