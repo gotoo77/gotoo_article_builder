@@ -8,34 +8,201 @@
   --accent-soft: rgba(240, 180, 41, 0.12);
   --border: rgba(255, 255, 255, 0.12);
   --measure: 74ch;
+  --wide: 92ch;
 }
+
 * { box-sizing: border-box; }
-html { font-size: 18px; line-height: 1.65; background: var(--bg); color: var(--text); }
-body { margin: 0; font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; text-rendering: optimizeLegibility; }
-.page { width: min(100% - 2rem, 980px); margin: 0 auto; padding: 4rem 0 2rem; }
-.article { max-width: var(--measure); margin: 0 auto; }
-.article-header { padding-bottom: 2rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); }
-.article-title { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; font-size: clamp(2.4rem, 7vw, 5rem); line-height: .98; letter-spacing: -.045em; }
-.article-subtitle { margin: 1.4rem 0 0; max-width: 58ch; color: var(--muted); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 1.15rem; line-height: 1.45; }
-.article-meta { margin: 1.25rem 0 0; color: var(--muted); font: .82rem/1.4 ui-sans-serif, system-ui, sans-serif; text-transform: uppercase; letter-spacing: .08em; }
-.article-body h1,.article-body h2,.article-body h3 { margin: 2.5em 0 .65em; font-family: ui-sans-serif, system-ui, sans-serif; line-height: 1.15; letter-spacing: -.025em; }
+
+html {
+  font-size: 19px;
+  line-height: 1.72;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  text-rendering: optimizeLegibility;
+}
+
+.page {
+  width: min(100% - 2rem, 1100px);
+  margin: 0 auto;
+  padding: 4rem 0 2rem;
+}
+
+.article {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.article-header {
+  padding-bottom: 2.2rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-title {
+  margin: 0;
+  max-width: 18ch;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2.35rem, 5.5vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.article-subtitle {
+  margin: 1.4rem 0 0;
+  max-width: 58ch;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.12rem;
+  line-height: 1.5;
+}
+
+.article-meta {
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font: .78rem/1.4 ui-sans-serif, system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.article-body h1,
+.article-body h2,
+.article-body h3 {
+  margin: 3em 0 .75em;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.15;
+  letter-spacing: -.025em;
+}
+
 .article-body h2 { font-size: 1.65rem; }
-.article-body p,.article-body ul,.article-body ol { margin: 1.15em 0; }
-a { color: var(--accent); text-decoration-thickness: .08em; text-underline-offset: .18em; }
-blockquote { margin: 2rem 0; padding: .2rem 0 .2rem 1.4rem; border-left: 4px solid var(--accent); color: #d7dde4; font-size: 1.1rem; }
-img { display: block; max-width: 100%; height: auto; margin: 2.2rem auto; border-radius: .7rem; }
-figure { margin: 2.5rem 0; }
-figcaption { margin-top: -1.5rem; color: var(--muted); text-align: center; font: .8rem/1.4 ui-sans-serif, system-ui, sans-serif; }
-.punchline { margin: 2.5rem 0; padding: 1.4rem 1.5rem; border: 1px solid rgba(240,180,41,.35); border-radius: .8rem; background: var(--accent-soft); font: 700 1.35rem/1.35 ui-sans-serif, system-ui, sans-serif; }
-.punchline > :first-child { margin-top: 0; }
-.punchline > :last-child { margin-bottom: 0; }
-pre { overflow-x: auto; padding: 1rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--surface); }
-.site-footer { max-width: var(--measure); margin: 4rem auto 0; padding-top: 1.2rem; border-top: 1px solid var(--border); color: var(--muted); font: .75rem/1.4 ui-sans-serif, system-ui, sans-serif; text-align: right; }
+
+.article-body p,
+.article-body ul,
+.article-body ol {
+  margin: 1.25em 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: .08em;
+  text-underline-offset: .18em;
+}
+
+blockquote {
+  margin: 2.4rem 0;
+  padding: .25rem 0 .25rem 1.5rem;
+  border-left: 4px solid var(--accent);
+  color: #d7dde4;
+  font-size: 1.08rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2.4rem auto;
+  border-radius: .7rem;
+}
+
+figure { margin: 2.8rem 0; }
+
+figcaption {
+  margin-top: -1.65rem;
+  color: var(--muted);
+  text-align: center;
+  font: .78rem/1.4 ui-sans-serif, system-ui, sans-serif;
+}
+
+.punchline {
+  margin: 2.8rem 0;
+  padding: 1.45rem 1.55rem;
+  border: 1px solid rgba(240, 180, 41, .35);
+  border-radius: .8rem;
+  background: var(--accent-soft);
+  font: 700 1.3rem/1.4 ui-sans-serif, system-ui, sans-serif;
+}
+
+.punchline > :first-child,
+.aside > :first-child { margin-top: 0; }
+
+.punchline > :last-child,
+.aside > :last-child { margin-bottom: 0; }
+
+.aside {
+  margin: 2.6rem 0;
+  padding: 1.2rem 1.4rem;
+  border-left: 3px solid var(--muted);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.wide {
+  width: min(var(--wide), calc(100vw - 2rem));
+  margin: 3rem 50%;
+  transform: translateX(-50%);
+}
+
+.wide img,
+.wide figure {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: .6rem;
+  background: var(--surface);
+}
+
+.site-footer {
+  max-width: var(--measure);
+  margin: 4.5rem auto 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font: .75rem/1.4 ui-sans-serif, system-ui, sans-serif;
+  text-align: right;
+}
+
 @media (max-width: 640px) {
   html { font-size: 17px; }
-  .page { width: min(100% - 1.4rem, 980px); padding-top: 2rem; }
+
+  .page {
+    width: min(100% - 1.4rem, 1100px);
+    padding-top: 2rem;
+  }
+
+  .article-title {
+    max-width: none;
+    font-size: clamp(2.25rem, 12vw, 3.4rem);
+  }
+
+  .wide {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    transform: none;
+  }
 }
+
 @media print {
-  :root { color-scheme: light; --bg:#fff; --surface:#f5f5f5; --text:#111; --muted:#555; --border:#ddd; }
+  :root {
+    color-scheme: light;
+    --bg: #fff;
+    --surface: #f5f5f5;
+    --text: #111;
+    --muted: #555;
+    --border: #ddd;
+  }
+
   .page { width: auto; padding: 0; }
+  .wide { width: auto; margin-left: 0; margin-right: 0; transform: none; }
 }
