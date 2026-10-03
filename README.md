@@ -110,6 +110,21 @@ Wide content, typically an image:
 
 These are presentation hints only. The article source stays readable Markdown and the HTML template remains generic.
 
+## Tools
+
+Experimental helpers live under `tools/` and stay isolated from the article build pipeline.
+
+### Ticket Lab
+
+`tools/ticket_lab/` generates customizable SVG tickets from a text SVG template and JSON data.
+
+```bash
+python3 tools/ticket_lab/render_ticket.py 001
+python3 tools/ticket_lab/render_ticket.py --all
+```
+
+See `tools/ticket_lab/README.md` for the template and data model.
+
 ## Scope
 
 The first version intentionally does not provide a CMS, JavaScript framework, server, database or static-site generator.
