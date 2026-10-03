@@ -82,7 +82,7 @@ A short sentence worth emphasizing.
 
 ## Editorial blocks
 
-The default theme defines three small building blocks using Pandoc fenced divs.
+The default theme defines a few small building blocks using Pandoc fenced divs.
 
 Punchline:
 
@@ -107,6 +107,20 @@ Wide content, typically an image:
 ![An image](assets/image.png)
 :::
 ```
+
+Five-ticket strip:
+
+```md
+::: ticket-strip
+![Jeton 001](tools/ticket_lab/out/ticket_001.svg)
+![Jeton 002](tools/ticket_lab/out/ticket_002.svg)
+![Jeton 003](tools/ticket_lab/out/ticket_003.svg)
+![Jeton 004](tools/ticket_lab/out/ticket_004.svg)
+![Jeton 005](tools/ticket_lab/out/ticket_005.svg)
+:::
+```
+
+On desktop, the five tickets are displayed in one row. On narrower screens the layout falls back to two columns, then one column on mobile.
 
 These are presentation hints only. The article source stays readable Markdown and the HTML template remains generic.
 
