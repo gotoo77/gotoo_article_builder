@@ -1,0 +1,7 @@
+    <g transform="translate(-62 -48)" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 38 Q10 15 31 23 Q55 8 79 23 Q100 15 90 38 Q96 57 86 72 Q73 88 55 88 Q37 88 24 72 Q14 57 20 38Z" fill="#f1eee6"/>
+      <path d="M30 47 h20 l-3 16 H32 Z" fill="#303942"/>
+      <path d="M60 47 h20 l-2 16 H63 Z" fill="#303942"/>
+      <path d="M50 51 h10 M49 72 q6 5 12 0" fill="none"/>
+      <path d="M98 70 v-18 q0-8 7-8 q6 0 6 7 v7 h8 q8 0 6 8 l-5 16 q-2 6-8 6 H98Z" fill="#f1eee6"/>
+    </g>
